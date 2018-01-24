@@ -47,8 +47,8 @@ public class ConsoleController {
         return res;
     }
 
-    private void giveCustomersOrderToTheChief(int numberOfProductInMenu){
-//        switch(numberOfProductInMenu){
+    private void giveCustomersOrderToTheChief(int numberOfItemInMenu){
+//        switch(numberOfItemInMenu){
 //            case 1: {
 //                chiefController.getSaladChief().setFactoryOfMeals(new GreekSaladFactory());
 //                break;
