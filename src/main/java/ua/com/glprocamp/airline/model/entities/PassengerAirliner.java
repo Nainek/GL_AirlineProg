@@ -2,13 +2,13 @@ package ua.com.glprocamp.airline.model.entities;
 
 public class PassengerAirliner extends Airliner {
 
-    private int quantityOfSits;
+    private int quantityOfSitsForPassanger;
 
-    public int getQuantityOfSits() {
-        return quantityOfSits;
+    public int getQuantityOfSitsForPassanger() {
+        return quantityOfSitsForPassanger;
     }
 
-    public void setQuantityOfSits(int quantityOfSits) {
-        this.quantityOfSits = quantityOfSits;
+    public void suantityOfSitsForPassanger(int quantityOfSitsForPassanger) {
+        this.quantityOfSitsForPassanger = quantityOfSitsForPassanger;
     }
 }
