@@ -1,5 +1,6 @@
 package ua.com.glprocamp.airline;
 
+import ua.com.glprocamp.airline.controllers.ConsoleController;
 import ua.com.glprocamp.airline.views.ConsoleView;
 
 public class AppRunner {

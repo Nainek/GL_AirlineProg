@@ -4,12 +4,8 @@ import ua.com.glprocamp.airline.controllers.LanguageController;
 
 import java.util.ResourceBundle;
 
-public class ConsoleView implements View{
+public class ConsoleView {
 
-
-    private void printMessage(String message){
-        System.out.println(message);
-    }
 
     // Resource Bundle Installation's
     public static final String MESSAGES_BUNDLE_NAME = "messages";
@@ -30,7 +26,6 @@ public class ConsoleView implements View{
 
 
 
-
     public void printWrongIntInput(){
         printMessage(getWrongIntInput());
     }
@@ -41,6 +36,10 @@ public class ConsoleView implements View{
 
     public void printOfferMessage() {
         printMessage(getOfferMessage());
+    }
+
+    private void printMessage(String message){
+        System.out.println(message);
     }
 
 

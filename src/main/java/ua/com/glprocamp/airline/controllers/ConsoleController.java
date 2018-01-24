@@ -24,12 +24,12 @@ public class ConsoleController {
         consoleView.printOfferMessage();
 
         choiseNumber = getNumberOfTheUsersChoise(sc);
-        giveCustomersOrderToTheChief(orderNumber);
-
-        chiefController.createMeal();
-        chiefController.setMeal(chiefController.getMeal());
-
-        consoleView.printDescriptionAboutFood(chiefController.getMeal().toString());
+//        giveCustomersOrderToTheChief(orderNumber);
+//
+//        chiefController.createMeal();
+//        chiefController.setMeal(chiefController.getMeal());
+//
+//        consoleView.printDescriptionAboutFood(chiefController.getMeal().toString());
 
     }
 
@@ -48,36 +48,38 @@ public class ConsoleController {
     }
 
     private void giveCustomersOrderToTheChief(int numberOfProductInMenu){
-        switch(numberOfProductInMenu){
-            case 1: {
-                chiefController.getSaladChief().setFactoryOfMeals(new GreekSaladFactory());
-                break;
-            }
-            case 2: {
-                chiefController.getSaladChief().setFactoryOfMeals(new CeasarSaladFactory());
-                break;
-            }
-            default: {
-                chiefController.getSaladChief().setFactoryOfMeals(new GlassOfWaterFactory());
-                break;
-            }
-        }
+//        switch(numberOfProductInMenu){
+//            case 1: {
+//                chiefController.getSaladChief().setFactoryOfMeals(new GreekSaladFactory());
+//                break;
+//            }
+//            case 2: {
+//                chiefController.getSaladChief().setFactoryOfMeals(new CeasarSaladFactory());
+//                break;
+//            }
+//            default: {
+//                chiefController.getSaladChief().setFactoryOfMeals(new GlassOfWaterFactory());
+//                break;
+//            }
+//        }
     }
 
-    public ChiefController getChiefController() {
-        return chiefController;
-    }
-
-    public void setChiefController(ChiefController chiefController) {
-        this.chiefController = chiefController;
-    }
-
-    public SearchFoodInTheRangeStrategy getTypeOfSearch() {
-        return typeOfSearch;
-    }
-
-    public void setTypeOfSearch(SearchFoodInTheRangeStrategy typeOfSearch) {
-        this.typeOfSearch = typeOfSearch;
-    }
-
+//    public ChiefController getChiefController() {
+//        return chiefController;
+//    }
+//
+//    public void setChiefController(ChiefController chiefController) {
+//        this.chiefController = chiefController;
+//    }
+//
+//    public SearchFoodInTheRangeStrategy getTypeOfSearch() {
+//        return typeOfSearch;
+//    }
+//
+//    public void setTypeOfSearch(SearchFoodInTheRangeStrategy typeOfSearch) {
+//        this.typeOfSearch = typeOfSearch;
+//    }
+//
 }
+
+

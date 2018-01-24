@@ -8,7 +8,7 @@ public class CreationService {
 
 
 
-    public void createAirLineCompanyWithAircrafts(){
+    public void creAirLineCompanyWithAircrafts(){
 //        airLine.addAirliner();
     }
 
@@ -17,11 +17,14 @@ public class CreationService {
     }
 
 
-    public AirLine getAirLine() {
-        return airLine;
-    }
+
 
     public void setAirLine(AirLine airLine) {
         this.airLine = airLine;
     }
+
+    public AirLine getAirLineCompany(){
+        return airLine;
+    }
+
 }
