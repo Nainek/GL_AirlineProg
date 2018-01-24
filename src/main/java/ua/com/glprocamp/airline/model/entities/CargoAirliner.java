@@ -13,4 +13,8 @@ public class CargoAirliner extends Airliner {
     public void setCargoHoldCapasity(int cargoHoldCapasity) {
         this.cargoHoldCapasity = cargoHoldCapasity;
     }
+
+    public int getCarryingCapasity() {
+        return cargoHoldCapasity;
+    }
 }

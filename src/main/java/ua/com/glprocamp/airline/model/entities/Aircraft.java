@@ -8,6 +8,8 @@ public abstract class Aircraft {
     private int cargoCapasity;
 
 
+    public abstract int getCarryingCapasity();
+
 
     public MethodOfLift getMethodOfLift() {
         return methodOfLift;
