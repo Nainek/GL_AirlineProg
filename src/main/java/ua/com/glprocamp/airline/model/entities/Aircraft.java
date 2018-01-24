@@ -1,6 +1,6 @@
 package ua.com.glprocamp.airline.model.entities;
 
-public class Aircraft {
+public abstract class Aircraft {
 
     private MethodOfLift methodOfLift;
 
