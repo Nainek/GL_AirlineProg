@@ -10,6 +10,8 @@ public class ConsoleController {
     private View consoleView = new View();
     private AirLineController airlineController = new AirLineController(new AirLineService());
 
+    private Scanner sc = new Scanner(System.in);
+
 //    private SearchFoodInTheRangeStrategy typeOfSearch = new SearchFoodInTheSpecifiedRangeOfProteins();
 
     public ConsoleController(View consoleView) {
@@ -21,7 +23,7 @@ public class ConsoleController {
         consoleView.printGreetingMessage();
         consoleView.printOfferMessage();
 
-        Scanner sc = new Scanner(System.in);
+
         int choiceNumber = 0;
         choiceNumber = getNumberOfTheUsersChoice(sc);
         redirectUserChoice(choiceNumber);
@@ -48,24 +50,28 @@ public class ConsoleController {
     }
 
     private void redirectUserChoice(int itemNumber){
-//        switch(itemNumber){
-//            case 1: {
-//                airlineController..setFactoryOfMeals(new GreekSaladFactory());
-//                break;
-//            }
-//            case 2: {
-//                airlineController.getSaladChief().setFactoryOfMeals(new CeasarSaladFactory());
-//                break;
-//            }
-//            case 3: {
-//                airlineController.getSaladChief().setFactoryOfMeals(new CeasarSaladFactory());
-//                break;
-//            }
-//            default: {
-//                airlineController.getSaladChief().setFactoryOfMeals(new GlassOfWaterFactory());
-//                break;
-//            }
-//        }
+        switch(itemNumber){
+            case 1: {
+                airlineController.findAircraftInTheSpecifiedRange(airline, getNumberOfTheUsersChoice(sc), getNumberOfTheUsersChoice(sc));
+                break;
+            }
+            case 2: {
+                airlineController.sortAirlinersByFlightRange(airline);
+                break;
+            }
+            case 3: {
+                airlineController.calculateCapacity(airline);
+                break;
+            }
+            case 4: {
+                airlineController.calculatePassengerCapacity(airline);
+                break;
+            }
+            default: {
+                consoleView.printGoodbyeMessage();
+                break;
+            }
+        }
     }
 
 //    public ChiefController getChiefController() {

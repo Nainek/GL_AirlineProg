@@ -20,13 +20,17 @@ public class AirLineController {
 
     }
 
+
+    public List<Airliner> findAircraftInTheSpecifiedRange(AirLine airLine, int startRange, int endRange){
+        return airLineService.getSearchAircraftsStrategy().findAircraftInTheSpecifiedRange(airLine.getAirliners(),startRange, endRange);
+    }
+
     public List<Aircraft> sortAirlinersByFlightRange(List<Aircraft> aircrafts){
 
         Collections.sort(aircrafts, new ComparatorByFlightRange());
         return aircrafts;
 
     }
-
 
     public int calculateCapacity(AirLine airLine) {
         return airLineService.getAirLineStatisticsService().calculateCarryingCapacity(airLine);
@@ -36,9 +40,6 @@ public class AirLineController {
         return airLineService.getAirLineStatisticsService().calculateSeatingCapasity(airLine);
     }
 
-    public List<Airliner> findAircraftInTheSpecifiedRange(AirLine airLine, int startRange, int endRange){
-        return airLineService.getSearchAircraftsStrategy().findAircraftInTheSpecifiedRange(airLine.getAirliners(),startRange, endRange);
-    }
 
     public AirLine getAirline() {
         return airline;
