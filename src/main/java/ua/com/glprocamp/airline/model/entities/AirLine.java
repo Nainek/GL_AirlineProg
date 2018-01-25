@@ -17,10 +17,7 @@ public class AirLine {
             return this;
         }
 
-        public Builder setPLiners(List<PassengerAirliner> pLiners){
-            airLine.pLiners = pLiners;
-            return this;
-        }
+
 
         public AirLine build() {
             return airLine;

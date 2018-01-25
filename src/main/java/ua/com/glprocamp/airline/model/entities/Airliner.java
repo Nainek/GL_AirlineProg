@@ -2,6 +2,7 @@ package ua.com.glprocamp.airline.model.entities;
 
 public abstract class Airliner extends Aircraft {
 
+    private int quantityOfSitsForCrew;
     private Crew crew;
     private int fuelConsumption;
 
@@ -19,5 +20,17 @@ public abstract class Airliner extends Aircraft {
 
     public void setFuelConsumption(int fuelConsumption) {
         this.fuelConsumption = fuelConsumption;
+    }
+
+    public int getQuantityOfSitsForCrew() {
+        return quantityOfSitsForCrew;
+    }
+
+    public void setQuantityOfSitsForCrew(int quantityOfSitsForCrew) {
+        this.quantityOfSitsForCrew = quantityOfSitsForCrew;
+    }
+
+    public int getQuantityOfSits() {
+        return quantityOfSitsForCrew;
     }
 }

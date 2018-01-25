@@ -2,6 +2,7 @@ package ua.com.glprocamp.airline.model.entities;
 
 public class PassengerAirliner extends Airliner {
 
+
     private int quantityOfSitsForPassanger;
     private int luggageСompartmentCapasity;
 
@@ -24,6 +25,10 @@ public class PassengerAirliner extends Airliner {
 
     public void setLuggageСompartmentCapasity(int luggageСompartmentCapasity) {
         this.luggageСompartmentCapasity = luggageСompartmentCapasity;
+    }
+
+    public int getQuantityOfSits() {
+        return getQuantityOfSitsForCrew() + getQuantityOfSitsForPassanger();
     }
 
 
