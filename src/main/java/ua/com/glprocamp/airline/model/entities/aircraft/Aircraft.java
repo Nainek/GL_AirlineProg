@@ -1,5 +1,6 @@
 package ua.com.glprocamp.airline.model.entities.aircraft;
 
+import ua.com.glprocamp.airline.model.entities.IBuilder;
 import ua.com.glprocamp.airline.model.entities.MethodOfLift;
 
 public abstract class Aircraft {
@@ -11,6 +12,8 @@ public abstract class Aircraft {
 
 
     public abstract int getCarryingCapasity();
+
+
 
 
     public MethodOfLift getMethodOfLift() {

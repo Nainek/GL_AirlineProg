@@ -1,20 +1,26 @@
 package ua.com.glprocamp.airline.model.services;
 
+import ua.com.glprocamp.airline.model.entities.aircraft.Airliner;
 import ua.com.glprocamp.airline.model.entities.airline.AirLine;
+
+import java.util.List;
 
 public class CreationService {
 
     AirLine airLine;
-
+    List<Airliner> airlinerList;
 
 
     public void createAirLineCompanyWithAirliners(){
-        airLine = new AirLine.Builder().build();
+        createAircraftsForAirline();
+        airLine = new AirLine.Builder()
+                .setAirliners(airlinerList)
+                .build();
 
     }
 
     public void createAircraftsForAirline(){
-
+        Airliner
     }
 
 
