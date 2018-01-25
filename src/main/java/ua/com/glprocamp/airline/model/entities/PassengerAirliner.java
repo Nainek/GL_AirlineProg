@@ -4,11 +4,11 @@ public class PassengerAirliner extends Airliner {
 
 
     private int quantityOfSitsForPassanger;
-    private int luggageСompartmentCapasity;
+    private int luggageCompartmentCapacity;
 
 
     public int getCarryingCapasity() {
-        return luggageСompartmentCapasity;
+        return luggageCompartmentCapacity;
     }
 
     public int getQuantityOfSitsForPassanger() {
@@ -19,12 +19,12 @@ public class PassengerAirliner extends Airliner {
         this.quantityOfSitsForPassanger = quantityOfSitsForPassanger;
     }
 
-    public int getLuggageСompartmentCapasity() {
-        return luggageСompartmentCapasity;
+    public int getLuggageCompartmentCapacity() {
+        return luggageCompartmentCapacity;
     }
 
-    public void setLuggageСompartmentCapasity(int luggageСompartmentCapasity) {
-        this.luggageСompartmentCapasity = luggageСompartmentCapasity;
+    public void setLuggageCompartmentCapacity(int luggageCompartmentCapacity) {
+        this.luggageCompartmentCapacity = this.luggageCompartmentCapacity;
     }
 
     public int getQuantityOfSits() {
