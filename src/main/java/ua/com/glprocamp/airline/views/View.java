@@ -30,8 +30,9 @@ public class View {
         printMessage(ViewLocale.BUNDLE.getString(ViewMessage.OFFER_MESSAGE), ViewMessageUtils.NEW_LINE);
     }
 
-    private void printMessage(String message){
-        System.out.println(message);
+    public void printMessage(String... messages) {
+        String resultedMessage = concatenationString(messages);
+        System.out.println(resultedMessage);
     }
 
 
