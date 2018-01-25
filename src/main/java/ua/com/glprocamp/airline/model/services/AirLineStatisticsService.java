@@ -14,7 +14,7 @@ public class AirLineStatisticsService {
 
     }
 
-    public int calculateCarryingCapasity(AirLine airLine){
+    public int calculateCarryingCapacity(AirLine airLine){
 
         return new CapasityCalculation().calculate(airLine);
 
