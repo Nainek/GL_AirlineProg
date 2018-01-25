@@ -1,30 +1,30 @@
 package ua.com.glprocamp.airline.controllers;
 
-import ua.com.glprocamp.airline.views.ConsoleView;
+import ua.com.glprocamp.airline.model.services.AirLineService;
+import ua.com.glprocamp.airline.views.View;
 
 import java.util.Scanner;
 
 public class ConsoleController {
 
-    private ConsoleView consoleView = new ConsoleView();
-    private AirLineController airlineController = new AirLineController();
+    private View consoleView = new View();
+    private AirLineController airlineController = new AirLineController(new AirLineService());
 
 //    private SearchFoodInTheRangeStrategy typeOfSearch = new SearchFoodInTheSpecifiedRangeOfProteins();
 
-    public ConsoleController(ConsoleView consoleView) {
+    public ConsoleController(View consoleView) {
         this.consoleView = consoleView;
     }
 
     public void processUser(){
 
-        Scanner sc = new Scanner(System.in);
-        int choiseNumber = 0;
-
         consoleView.printGreetingMessage();
         consoleView.printOfferMessage();
 
-        choiseNumber = getNumberOfTheUsersChoise(sc);
-//        giveCustomersOrderToTheChief(orderNumber);
+        Scanner sc = new Scanner(System.in);
+        int choiceNumber = 0;
+        choiceNumber = getNumberOfTheUsersChoice(sc);
+        redirectUserChoice(choiceNumber);
 //
 //        chiefController.createMeal();
 //        chiefController.setMeal(chiefController.getMeal());
@@ -34,12 +34,12 @@ public class ConsoleController {
     }
 
 
-    private int getNumberOfTheUsersChoise(Scanner sc) {
+    private int getNumberOfTheUsersChoice(Scanner sc) {
         int res = 0;
 
         // check int - value
         while (!sc.hasNextInt()) {
-            consoleView.printWrongIntInput();
+            consoleView.printWrongInputMessage();
             sc.next();
         }
         res = sc.nextInt();
@@ -47,18 +47,22 @@ public class ConsoleController {
         return res;
     }
 
-    private void giveCustomersOrderToTheChief(int numberOfItemInMenu){
-//        switch(numberOfItemInMenu){
+    private void redirectUserChoice(int itemNumber){
+//        switch(itemNumber){
 //            case 1: {
-//                chiefController.getSaladChief().setFactoryOfMeals(new GreekSaladFactory());
+//                airlineController..setFactoryOfMeals(new GreekSaladFactory());
 //                break;
 //            }
 //            case 2: {
-//                chiefController.getSaladChief().setFactoryOfMeals(new CeasarSaladFactory());
+//                airlineController.getSaladChief().setFactoryOfMeals(new CeasarSaladFactory());
+//                break;
+//            }
+//            case 3: {
+//                airlineController.getSaladChief().setFactoryOfMeals(new CeasarSaladFactory());
 //                break;
 //            }
 //            default: {
-//                chiefController.getSaladChief().setFactoryOfMeals(new GlassOfWaterFactory());
+//                airlineController.getSaladChief().setFactoryOfMeals(new GlassOfWaterFactory());
 //                break;
 //            }
 //        }

@@ -9,7 +9,7 @@ import ua.com.glprocamp.airline.model.search.*;
 import java.util.Collections;
 import java.util.List;
 
-public class AirlineService {
+public class AirLineService {
 
     AirLineStatisticsService airLineStatisticsService = new AirLineStatisticsService();
     AircraftComparator aircraftComparator = new ComparatorByFlightRange();
@@ -39,5 +39,29 @@ public class AirlineService {
 
     public List<Airliner> findAircraftInTheSpecifiedRange(AirLine airLine, int startRange, int endRange){
         return searchAircraftsStrategy.findAircraftInTheSpecifiedRange(airLine.getAirliners(),startRange, endRange);
+    }
+
+    public AirLineStatisticsService getAirLineStatisticsService() {
+        return airLineStatisticsService;
+    }
+
+    public void setAirLineStatisticsService(AirLineStatisticsService airLineStatisticsService) {
+        this.airLineStatisticsService = airLineStatisticsService;
+    }
+
+    public AircraftComparator getAircraftComparator() {
+        return aircraftComparator;
+    }
+
+    public void setAircraftComparator(AircraftComparator aircraftComparator) {
+        this.aircraftComparator = aircraftComparator;
+    }
+
+    public SearchAircraftsStrategy getSearchAircraftsStrategy() {
+        return searchAircraftsStrategy;
+    }
+
+    public void setSearchAircraftsStrategy(SearchAircraftsStrategy searchAircraftsStrategy) {
+        this.searchAircraftsStrategy = searchAircraftsStrategy;
     }
 }

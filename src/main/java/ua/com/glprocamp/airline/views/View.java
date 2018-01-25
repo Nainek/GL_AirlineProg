@@ -17,12 +17,12 @@ public class View {
 
 
 
-    public void printWrongInput() {
+    public void printWrongInputMessage() {
         printMessage(ViewLocale.BUNDLE.getString(ViewMessage.WRONG_INPUT_INT_DATA));
     }
 
 
-    public void printGreeting() {
+    public void printGreetingMessage() {
         printMessage(ViewLocale.BUNDLE.getString(ViewMessage.HELLO_MESSAGE), ViewMessageUtils.NEW_LINE);
     }
 

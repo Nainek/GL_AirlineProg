@@ -21,7 +21,7 @@ final class UserInputProcessUtility {
 
         String res = "";
         while (!(scanner.hasNextLine() && (res = scanner.nextLine()).matches(regex))) {
-            view.printWrongInput();
+            view.printWrongInputMessage();
             view.printMessage(message);
         }
 
