@@ -7,20 +7,20 @@ import ua.com.glprocamp.airline.model.entities.crew.Crew;
 public class PassengerAirliner extends Airliner {
 
 
-    private int quantityOfSitsForPassanger;
+    private int quantityOfSitsForPassenger;
     private int luggageCompartmentCapacity;
 
 
     public int getQuantityOfSits() {
-        return getQuantityOfSitsForCrew() + getQuantityOfSitsForPassanger();
+        return getQuantityOfSitsForCrew() + getQuantityOfSitsForPassenger();
     }
 
 
     public static class Builder implements IBuilder<Airliner> {
         PassengerAirliner airliner = new PassengerAirliner();
 
-        public Builder setQuantityOfSitsForPassanger(int quantityOfSitsForPassanger) {
-            airliner.quantityOfSitsForPassanger = quantityOfSitsForPassanger;
+        public Builder setQuantityOfSitsForPassenger(int quantityOfSitsForPassenger) {
+            airliner.quantityOfSitsForPassenger = quantityOfSitsForPassenger;
             return this;
         }
 
@@ -54,8 +54,8 @@ public class PassengerAirliner extends Airliner {
             return this;
         }
 
-        public Builder setWeightCapasity(int weightCapasity) {
-            airliner.setWeightCapasity(weightCapasity);
+        public Builder setWeightCapacity(int weightCapacity) {
+            airliner.setWeightCapacity(weightCapacity);
             return this;
         }
 
@@ -65,16 +65,16 @@ public class PassengerAirliner extends Airliner {
         }
     }
 
-    public int getCarryingCapasity() {
+    public int getCarryingCapacity() {
         return luggageCompartmentCapacity;
     }
 
-    public int getQuantityOfSitsForPassanger() {
-        return quantityOfSitsForPassanger;
+    public int getQuantityOfSitsForPassenger() {
+        return quantityOfSitsForPassenger;
     }
 
-    public void setQuantityOfSitsForPassanger(int quantityOfSitsForPassanger) {
-        this.quantityOfSitsForPassanger = quantityOfSitsForPassanger;
+    public void setQuantityOfSitsForPassenger(int quantityOfSitsForPassenger) {
+        this.quantityOfSitsForPassenger = quantityOfSitsForPassenger;
     }
 
     public int getLuggageCompartmentCapacity() {

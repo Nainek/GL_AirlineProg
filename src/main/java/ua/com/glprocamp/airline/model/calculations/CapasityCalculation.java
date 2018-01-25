@@ -13,7 +13,7 @@ public class CapasityCalculation implements CalculationStrategy<AirLine, Integer
 
         Iterator<Airliner> iterator = airLine.getAirliners().iterator();
         while(iterator.hasNext()){
-            result += iterator.next().getCarryingCapasity();
+            result += iterator.next().getCarryingCapacity();
         }
         return result;
     }

@@ -7,10 +7,10 @@ public abstract class Aircraft {
 
     private MethodOfLift methodOfLift;
     private int flightRange;
-    private int weightCapasity;
+    private int weightCapacity;
 
 
-    public abstract int getCarryingCapasity();
+    public abstract int getCarryingCapacity();
 
 
 
@@ -31,12 +31,12 @@ public abstract class Aircraft {
         this.flightRange = flightRange;
     }
 
-    public int getWeightCapasity() {
-        return weightCapasity;
+    public int getWeightCapacity() {
+        return weightCapacity;
     }
 
-    public void setWeightCapasity(int weightCapasity) {
-        this.weightCapasity = weightCapasity;
+    public void setWeightCapacity(int weightCapasity) {
+        this.weightCapacity = weightCapacity;
     }
 
 

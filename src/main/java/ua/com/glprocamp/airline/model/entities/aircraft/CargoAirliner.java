@@ -6,14 +6,14 @@ import ua.com.glprocamp.airline.model.entities.crew.Crew;
 
 public class CargoAirliner extends Airliner {
 
-    private int cargoHoldCapasity;
+    private int cargoHoldCapacity;
 
 
     public static class Builder implements IBuilder<Airliner> {
         CargoAirliner airliner = new CargoAirliner();
 
-        public Builder setQuantityOfSitsForPassanger(int cargoHoldCapasity) {
-            airliner.cargoHoldCapasity = cargoHoldCapasity;
+        public Builder setCargoHoldCapacity(int cargoHoldCapacity) {
+            airliner.cargoHoldCapacity = cargoHoldCapacity;
             return this;
         }
 
@@ -42,8 +42,8 @@ public class CargoAirliner extends Airliner {
             return this;
         }
 
-        public Builder setWeightCapasity(int weightCapasity) {
-            airliner.setWeightCapasity(weightCapasity);
+        public Builder setWeightCapacity(int weightCapacity) {
+            airliner.setWeightCapacity(weightCapacity);
             return this;
         }
 
@@ -58,15 +58,15 @@ public class CargoAirliner extends Airliner {
     }
 
 
-    public int getCargoHoldCapasity() {
-        return cargoHoldCapasity;
+    public int getCargoHoldCapacity() {
+        return cargoHoldCapacity;
     }
 
-    public void setCargoHoldCapasity(int cargoHoldCapasity) {
-        this.cargoHoldCapasity = cargoHoldCapasity;
+    public void setCargoHoldCapacity(int cargoHoldCapasity) {
+        this.cargoHoldCapacity = cargoHoldCapacity;
     }
 
-    public int getCarryingCapasity() {
-        return cargoHoldCapasity;
+    public int getCarryingCapacity() {
+        return cargoHoldCapacity;
     }
 }
