@@ -85,6 +85,12 @@ public class PassengerAirliner extends Airliner {
         this.luggageCompartmentCapacity = luggageCompartmentCapacity;
     }
 
-
-
+    @Override
+    public String toString() {
+        return super.toString() +
+                "PassengerAirliner " +
+                "quantityOfSitsForPassenger=" + quantityOfSitsForPassenger +
+                ", luggageCompartmentCapacity=" + luggageCompartmentCapacity +
+                "}\n";
+    }
 }

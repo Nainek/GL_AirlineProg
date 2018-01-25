@@ -31,11 +31,11 @@ public class AirLineController {
 
     }
 
-    public int calculateCapacity() {
+    public Integer calculateCapacity() {
         return airLineService.getAirLineStatisticsService().calculateCarryingCapacity(airLine);
     }
 
-    public int calculatePassengerCapacity(){
+    public Integer calculatePassengerCapacity(){
         return airLineService.getAirLineStatisticsService().calculateSeatingCapasity(airLine);
     }
 

@@ -69,4 +69,12 @@ public class CargoAirliner extends Airliner {
     public int getCarryingCapacity() {
         return cargoHoldCapacity;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                "CargoAirliner " +
+                "cargoHoldCapacity=" + cargoHoldCapacity +
+                "}\n";
+    }
 }

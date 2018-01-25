@@ -35,4 +35,14 @@ public abstract class Airliner extends Aircraft {
     public int getQuantityOfSits() {
         return quantityOfSitsForCrew;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                "Airliner " +
+                "quantityOfSitsForCrew=" + quantityOfSitsForCrew +
+                ", crew=" + crew +
+                ", fuelConsumption=" + fuelConsumption +
+                '}';
+    }
 }

@@ -40,4 +40,12 @@ public abstract class Aircraft {
     }
 
 
+    @Override
+    public String toString() {
+        return "Aircraft{" +
+                "methodOfLift=" + methodOfLift +
+                ", flightRange=" + flightRange +
+                ", weightCapacity=" + weightCapacity +
+                '}';
+    }
 }

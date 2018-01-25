@@ -55,19 +55,21 @@ public class ConsoleController {
         AirLine airline = airlineController.getAirline();
         switch(itemNumber){
             case 1: {
-                airlineController.findAircraftInTheSpecifiedRange(getNumberOfTheUsersChoice(sc), getNumberOfTheUsersChoice(sc));
+                consoleView.printMessage(airlineController.
+                        findAircraftInTheSpecifiedRange(getNumberOfTheUsersChoice(sc),getNumberOfTheUsersChoice(sc))
+                                                        .toString());
                 break;
             }
             case 2: {
-                airlineController.sortAirlinersByFlightRange();
+                consoleView.printMessage(airlineController.sortAirlinersByFlightRange().toString());
                 break;
             }
             case 3: {
-                airlineController.calculateCapacity();
+                consoleView.printMessage(airlineController.calculateCapacity().toString());
                 break;
             }
             case 4: {
-                airlineController.calculatePassengerCapacity();
+                consoleView.printMessage(airlineController.calculatePassengerCapacity().toString());
                 break;
             }
             default: {
