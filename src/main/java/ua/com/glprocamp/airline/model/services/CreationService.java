@@ -9,12 +9,13 @@ import ua.com.glprocamp.airline.model.entities.crew.Crew;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 public class CreationService {
 
     AirLine airLine;
-    List<Airliner> airlinerList = new ArrayList<Airliner>();
+    List<Airliner> airlinerList = new LinkedList<Airliner>();
 
 
     public AirLine createAirLineCompanyWithAirliners(){
@@ -31,20 +32,12 @@ public class CreationService {
                 .setPersonal(Arrays.asList("First Stewardess", "Second Stewardess"))
                 .setPilot("Best Pilot").build();
 
-        Airliner airliner1 = new PassengerAirliner.Builder()
-                .setFlightRange(100)
-                .setFuelConsumption(500)
-                .setLuggageCompartmentCapacity(5)
-                .setMethodOfLift(MethodOfLift.FIXEDWING)
-                .setQuantityOfSitsForCrew(5)
-                .setQuantityOfSitsForPassenger(102)
-                .setWeightCapacity(130000)
-                .setCrew(crew)
-                .build();
+
+
 
         Airliner airliner2 = new PassengerAirliner.Builder()
                 .setFlightRange(120)
-                .setFuelConsumption(400)
+                .setFuelConsumption(502)
                 .setLuggageCompartmentCapacity(10)
                 .setMethodOfLift(MethodOfLift.FIXEDWING)
                 .setQuantityOfSitsForCrew(6)
@@ -63,7 +56,21 @@ public class CreationService {
                 .setCrew(crew)
                 .build();
 
-        airlinerList.addAll(Arrays.asList(airliner1,airliner2,airliner3));
+        Airliner airliner1 = new PassengerAirliner.Builder()
+                .setFlightRange(100)
+                .setFuelConsumption(501)
+                .setLuggageCompartmentCapacity(5)
+                .setMethodOfLift(MethodOfLift.FIXEDWING)
+                .setQuantityOfSitsForCrew(5)
+                .setQuantityOfSitsForPassenger(102)
+                .setWeightCapacity(130000)
+                .setCrew(crew)
+                .build();
+
+
+        airlinerList.add(airliner1);
+        airlinerList.add(airliner3);
+        airlinerList.add(airliner2);
     }
 
 

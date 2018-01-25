@@ -20,23 +20,22 @@ public class AirLineController {
         this.airLineService = airLineService;
     }
 
-    public List<Airliner> findAircraftInTheSpecifiedRange( int startRange, int endRange){
-        return airLineService.getSearchAircraftsStrategy().findAircraftInTheSpecifiedRange(airLine.getAirliners(),startRange, endRange);
+    public List<Airliner> findAircraftInTheSpecifiedRange(int startRange, int endRange){
+        return airLineService.findAircraftInTheSpecifiedRange(airLine, startRange, endRange);
     }
 
     public List<Airliner> sortAirlinersByFlightRange(){
 
-        Collections.sort(airLine.getAirliners(), new ComparatorByFlightRange());
-        return airLine.getAirliners();
+        return airLineService.sortAirlinersByFlightRange(airLine.getAirliners());
 
     }
 
     public Integer calculateCapacity() {
-        return airLineService.getAirLineStatisticsService().calculateCarryingCapacity(airLine);
+        return airLineService.calculateCapacity(airLine);
     }
 
     public Integer calculatePassengerCapacity(){
-        return airLineService.getAirLineStatisticsService().calculateSeatingCapasity(airLine);
+        return airLineService.calculatePassengerCapacity(airLine);
     }
 
 

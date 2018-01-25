@@ -19,11 +19,10 @@ public class SearchAirlinersInTheSpecifiedFuelConsumptionRange implements Search
         setRange(start,end);
 
         Iterator<Airliner> it = aircrafts.iterator();
-        if(it.hasNext()){
+        while (it.hasNext()){
             Airliner temporaryAirlinerForComparison = it.next();
             if(checkIfAirlinerMeetsTheRequirements(temporaryAirlinerForComparison)){
                 resultListOfProducts.add(temporaryAirlinerForComparison);
-
             }
         }
 

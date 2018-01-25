@@ -21,10 +21,11 @@ public class AirLineService {
 
     }
 
-    public List<Aircraft> sortAirlinersByFlightRange(List<Aircraft> aircrafts){
+    public List<Airliner> sortAirlinersByFlightRange(List<Airliner> aircrafts){
 
         Collections.sort(aircrafts, new ComparatorByFlightRange());
         return aircrafts;
+
 
     }
 
