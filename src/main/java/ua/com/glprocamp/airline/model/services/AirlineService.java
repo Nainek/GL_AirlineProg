@@ -1,13 +1,10 @@
 package ua.com.glprocamp.airline.model.services;
 
-import ua.com.glprocamp.airline.model.comparators.AircraftComparator;
-import ua.com.glprocamp.airline.model.comparators.ComparatorByFlightRange;
-import ua.com.glprocamp.airline.model.entities.AirLine;
-import ua.com.glprocamp.airline.model.entities.Aircraft;
-import ua.com.glprocamp.airline.model.entities.Airliner;
-import ua.com.glprocamp.airline.model.search.SearchAircraftsStrategy;
-import ua.com.glprocamp.airline.model.search.SearchAirlinersInTheSpecifiedFuelConsumptionRange;
+import ua.com.glprocamp.airline.model.comparators.*;
+import ua.com.glprocamp.airline.model.entities.*;
+import ua.com.glprocamp.airline.model.search.*;
 
+import java.util.Collections;
 import java.util.List;
 
 public class AirlineService {
@@ -22,7 +19,12 @@ public class AirlineService {
 
     }
 
-    public List<A>
+    public List<Aircraft> sortAirlinersByFlightRange(List<Aircraft> aircrafts){
+
+        Collections.sort(aircrafts, new ComparatorByFlightRange());
+        return aircrafts;
+
+    }
 
 
     public int calculateCapacity(AirLine airLine) {

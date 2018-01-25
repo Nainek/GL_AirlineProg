@@ -8,7 +8,7 @@ public class CreationService {
 
 
 
-    public void creAirLineCompanyWithAircrafts(){
+    public void createAirLineCompanyWithAircrafts(){
 //        airLine.addAirliner();
     }
 
