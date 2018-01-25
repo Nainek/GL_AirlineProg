@@ -1,6 +1,7 @@
 package ua.com.glprocamp.airline.model.services;
 
 import ua.com.glprocamp.airline.model.entities.aircraft.Airliner;
+import ua.com.glprocamp.airline.model.entities.aircraft.PassengerAirliner;
 import ua.com.glprocamp.airline.model.entities.airline.AirLine;
 
 import java.util.List;
@@ -20,7 +21,8 @@ public class CreationService {
     }
 
     public void createAircraftsForAirline(){
-        Airliner
+        Airliner airliner1 = new PassengerAirliner.Builder().setCargoCapasity()
+                .build();
     }
 
 

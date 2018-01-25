@@ -59,10 +59,6 @@ public class PassengerAirliner extends Airliner {
             return this;
         }
 
-        public Builder setCargoCapasity(int cargoCapasity) {
-            airliner.setCargoCapasity(cargoCapasity);
-            return this;
-        }
 
         public Airliner build() {
             return airliner;
