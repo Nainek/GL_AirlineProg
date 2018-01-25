@@ -12,7 +12,7 @@ public class PassengerCapasityCalculation implements CalculationStrategy<AirLine
 
             Iterator<PassengerAirliner> iterator = airLine.getPLiners().iterator();
             while(iterator.hasNext()){
-                result += iterator.next().getQuantityOfSitsForPassanger();
+                result += iterator.next().getQuantityOfSitsForPassenger();
             }
 
 
