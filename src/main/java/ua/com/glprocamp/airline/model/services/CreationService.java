@@ -8,12 +8,13 @@ public class CreationService {
 
 
 
-    public void createAirLineCompanyWithAircrafts(){
-//        airLine.addAirliner();
+    public void createAirLineCompanyWithAirliners(){
+        airLine = new AirLine.Builder().build();
+
     }
 
-    public void addAirCraftsForAirline(){
-//        airLine.addAirliner();
+    public void createAircraftsForAirline(){
+
     }
 
 
