@@ -1,7 +1,7 @@
 package ua.com.glprocamp.airline.model.calculations;
 
-import ua.com.glprocamp.airline.model.entities.AirLine;
-import ua.com.glprocamp.airline.model.entities.Airliner;
+import ua.com.glprocamp.airline.model.entities.airline.AirLine;
+import ua.com.glprocamp.airline.model.entities.aircraft.Airliner;
 
 import java.util.Iterator;
 

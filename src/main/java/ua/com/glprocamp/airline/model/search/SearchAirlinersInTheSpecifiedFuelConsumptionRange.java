@@ -1,6 +1,6 @@
 package ua.com.glprocamp.airline.model.search;
 
-import ua.com.glprocamp.airline.model.entities.Airliner;
+import ua.com.glprocamp.airline.model.entities.aircraft.Airliner;
 
 import java.util.Iterator;
 import java.util.LinkedList;

@@ -1,4 +1,8 @@
-package ua.com.glprocamp.airline.model.entities;
+package ua.com.glprocamp.airline.model.entities.airline;
+
+import ua.com.glprocamp.airline.model.entities.aircraft.Airliner;
+import ua.com.glprocamp.airline.model.entities.IBuilder;
+import ua.com.glprocamp.airline.model.entities.aircraft.PassengerAirliner;
 
 import java.util.List;
 

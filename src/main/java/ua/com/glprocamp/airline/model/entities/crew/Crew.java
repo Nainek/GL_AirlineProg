@@ -1,4 +1,4 @@
-package ua.com.glprocamp.airline.model.entities;
+package ua.com.glprocamp.airline.model.entities.crew;
 
 import java.util.List;
 

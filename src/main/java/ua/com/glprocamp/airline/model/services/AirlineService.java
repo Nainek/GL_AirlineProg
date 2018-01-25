@@ -1,7 +1,9 @@
 package ua.com.glprocamp.airline.model.services;
 
 import ua.com.glprocamp.airline.model.comparators.*;
-import ua.com.glprocamp.airline.model.entities.*;
+import ua.com.glprocamp.airline.model.entities.aircraft.Aircraft;
+import ua.com.glprocamp.airline.model.entities.aircraft.Airliner;
+import ua.com.glprocamp.airline.model.entities.airline.AirLine;
 import ua.com.glprocamp.airline.model.search.*;
 
 import java.util.Collections;

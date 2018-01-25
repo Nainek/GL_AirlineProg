@@ -3,7 +3,7 @@ package ua.com.glprocamp.airline.model.services;
 
 import ua.com.glprocamp.airline.model.calculations.CapasityCalculation;
 import ua.com.glprocamp.airline.model.calculations.PassengerCapasityCalculation;
-import ua.com.glprocamp.airline.model.entities.AirLine;
+import ua.com.glprocamp.airline.model.entities.airline.AirLine;
 
 public class AirLineStatisticsService {
 

@@ -1,4 +1,6 @@
-package ua.com.glprocamp.airline.model.entities;
+package ua.com.glprocamp.airline.model.entities.aircraft;
+
+import ua.com.glprocamp.airline.model.entities.crew.Crew;
 
 public abstract class Airliner extends Aircraft {
 

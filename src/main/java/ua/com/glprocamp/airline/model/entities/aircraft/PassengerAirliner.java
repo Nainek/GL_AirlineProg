@@ -1,4 +1,4 @@
-package ua.com.glprocamp.airline.model.entities;
+package ua.com.glprocamp.airline.model.entities.aircraft;
 
 public class PassengerAirliner extends Airliner {
 

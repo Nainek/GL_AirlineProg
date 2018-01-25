@@ -1,6 +1,6 @@
 package ua.com.glprocamp.airline.model.comparators;
 
-import ua.com.glprocamp.airline.model.entities.Aircraft;
+import ua.com.glprocamp.airline.model.entities.aircraft.Aircraft;
 
 public class ComparatorByFlightRange implements AircraftComparator {
 
