@@ -1,7 +1,6 @@
 package ua.com.glprocamp.airline.model.entities;
 
 import java.util.List;
-import java.util.Spliterators;
 
 public class AirLine {
 
