@@ -1,6 +1,8 @@
 package ua.com.glprocamp.airline.controllers;
 
+import ua.com.glprocamp.airline.model.entities.airline.AirLine;
 import ua.com.glprocamp.airline.model.services.AirLineService;
+import ua.com.glprocamp.airline.model.services.CreationService;
 import ua.com.glprocamp.airline.views.View;
 
 import java.util.Scanner;
@@ -8,7 +10,7 @@ import java.util.Scanner;
 public class ConsoleController {
 
     private View consoleView = new View();
-    private AirLineController airlineController = new AirLineController(new AirLineService());
+    private AirLineController airlineController = new AirLineController(new CreationService().createAirLineCompanyWithAirliners(), new AirLineService());
 
     private Scanner sc = new Scanner(System.in);
 
@@ -50,21 +52,22 @@ public class ConsoleController {
     }
 
     private void redirectUserChoice(int itemNumber){
+        AirLine airline = airlineController.getAirline();
         switch(itemNumber){
             case 1: {
-                airlineController.findAircraftInTheSpecifiedRange(airline, getNumberOfTheUsersChoice(sc), getNumberOfTheUsersChoice(sc));
+                airlineController.findAircraftInTheSpecifiedRange(getNumberOfTheUsersChoice(sc), getNumberOfTheUsersChoice(sc));
                 break;
             }
             case 2: {
-                airlineController.sortAirlinersByFlightRange(airline);
+                airlineController.sortAirlinersByFlightRange();
                 break;
             }
             case 3: {
-                airlineController.calculateCapacity(airline);
+                airlineController.calculateCapacity();
                 break;
             }
             case 4: {
-                airlineController.calculatePassengerCapacity(airline);
+                airlineController.calculatePassengerCapacity();
                 break;
             }
             default: {

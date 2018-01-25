@@ -12,41 +12,40 @@ import java.util.List;
 
 public class AirLineController {
 
-    AirLine airline;
+    AirLine airLine;
     AirLineService airLineService;
 
-    public AirLineController(AirLineService airLineService) {
+    public AirLineController(AirLine airLine, AirLineService airLineService) {
+        this.airLine = airLine;
         this.airLineService = airLineService;
-
     }
 
-
-    public List<Airliner> findAircraftInTheSpecifiedRange(AirLine airLine, int startRange, int endRange){
+    public List<Airliner> findAircraftInTheSpecifiedRange( int startRange, int endRange){
         return airLineService.getSearchAircraftsStrategy().findAircraftInTheSpecifiedRange(airLine.getAirliners(),startRange, endRange);
     }
 
-    public List<Aircraft> sortAirlinersByFlightRange(List<Aircraft> aircrafts){
+    public List<Airliner> sortAirlinersByFlightRange(){
 
-        Collections.sort(aircrafts, new ComparatorByFlightRange());
-        return aircrafts;
+        Collections.sort(airLine.getAirliners(), new ComparatorByFlightRange());
+        return airLine.getAirliners();
 
     }
 
-    public int calculateCapacity(AirLine airLine) {
+    public int calculateCapacity() {
         return airLineService.getAirLineStatisticsService().calculateCarryingCapacity(airLine);
     }
 
-    public int calculatePassengerCapacity(AirLine airLine){
+    public int calculatePassengerCapacity(){
         return airLineService.getAirLineStatisticsService().calculateSeatingCapasity(airLine);
     }
 
 
     public AirLine getAirline() {
-        return airline;
+        return airLine;
     }
 
-    public void setAirline(AirLine airline) {
-        this.airline = airline;
+    public void setAirline(AirLine airLine) {
+        this.airLine = airLine;
     }
 
     public AirLineService getAirLineService() {

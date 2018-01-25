@@ -7,24 +7,26 @@ import ua.com.glprocamp.airline.model.entities.aircraft.PassengerAirliner;
 import ua.com.glprocamp.airline.model.entities.airline.AirLine;
 import ua.com.glprocamp.airline.model.entities.crew.Crew;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class CreationService {
 
     AirLine airLine;
-    List<Airliner> airlinerList;
+    List<Airliner> airlinerList = new ArrayList<Airliner>();
 
 
-    public void createAirLineCompanyWithAirliners(){
+    public AirLine createAirLineCompanyWithAirliners(){
         createAircraftsForAirline();
         airLine = new AirLine.Builder()
                 .setAirliners(airlinerList)
                 .build();
 
+        return airLine;
     }
 
-    public void createAircraftsForAirline(){
+    private void createAircraftsForAirline(){
         Crew crew = new Crew.Builder()
                 .setPersonal(Arrays.asList("First Stewardess", "Second Stewardess"))
                 .setPilot("Best Pilot").build();

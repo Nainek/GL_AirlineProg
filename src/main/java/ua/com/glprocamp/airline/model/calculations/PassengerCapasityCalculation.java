@@ -1,5 +1,6 @@
 package ua.com.glprocamp.airline.model.calculations;
 
+import ua.com.glprocamp.airline.model.entities.aircraft.Airliner;
 import ua.com.glprocamp.airline.model.entities.airline.AirLine;
 import ua.com.glprocamp.airline.model.entities.aircraft.PassengerAirliner;
 
@@ -10,9 +11,9 @@ public class PassengerCapasityCalculation implements CalculationStrategy<AirLine
     public Integer calculate(AirLine airLine) {
         int result = 0;
 
-            Iterator<PassengerAirliner> iterator = airLine.getPLiners().iterator();
+            Iterator<Airliner> iterator = airLine.getAirliners().iterator();
             while(iterator.hasNext()){
-                result += iterator.next().getQuantityOfSitsForPassenger();
+                result += iterator.next().getQuantityOfSits();
             }
 
 
