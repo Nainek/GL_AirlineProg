@@ -1,4 +1,4 @@
-package ua.com.glprocamp.airline.model;
+package ua.com.glprocamp.airline.model.entities;
 
 /**
  *

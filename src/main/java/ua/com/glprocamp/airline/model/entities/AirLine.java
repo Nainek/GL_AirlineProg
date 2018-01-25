@@ -10,6 +10,28 @@ public class AirLine {
     private List<PassengerAirliner> pLiners;
 
 
+    public static class Builder implements IBuilder<AirLine> {
+        AirLine airLine = new AirLine();
+
+        public Builder setAirliners(List<Airliner> airliners){
+            airLine.airliners = airliners;
+            return this;
+        }
+
+        public Builder setPLiners(List<PassengerAirliner> pLiners){
+            airLine.pLiners = pLiners;
+            return this;
+        }
+
+        public AirLine build() {
+            return airLine;
+        }
+    }
+
+    private AirLine(){
+
+    }
+
     public List<PassengerAirliner> getPLiners() {
         return pLiners;
     }
