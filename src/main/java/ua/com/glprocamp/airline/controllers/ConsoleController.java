@@ -1,6 +1,5 @@
 package ua.com.glprocamp.airline.controllers;
 
-import ua.com.glprocamp.airline.model.entities.airline.AirLine;
 import ua.com.glprocamp.airline.model.services.AirLineService;
 import ua.com.glprocamp.airline.model.services.CreationService;
 import ua.com.glprocamp.airline.views.View;
@@ -9,7 +8,7 @@ import java.util.Scanner;
 
 public class ConsoleController {
 
-    private View consoleView = new View();
+    private View consoleView;
     private AirLineController airlineController = new AirLineController(new CreationService().createAirLineCompanyWithAirliners(), new AirLineService());
 
     private Scanner sc = new Scanner(System.in);
@@ -24,9 +23,8 @@ public class ConsoleController {
 
         int choiceNumber = 0;
         choiceNumber = getNumberOfTheUsersChoice(sc);
-        redirectUserChoice(choiceNumber);
+        redirectUsersChoice(choiceNumber);
     }
-
 
     private int getNumberOfTheUsersChoice(Scanner sc) {
         int res = 0;
@@ -39,32 +37,46 @@ public class ConsoleController {
         return res;
     }
 
-    private void redirectUserChoice(int itemNumber){
+    private void redirectUsersChoice(int itemNumber){
         switch(itemNumber){
             case 1: {
-                consoleView.printMessage(airlineController.
+                printResult(airlineController.
                         findAircraftInTheSpecifiedRange(getNumberOfTheUsersChoice(sc),getNumberOfTheUsersChoice(sc))
                                                         .toString());
                 break;
             }
             case 2: {
-                consoleView.printMessage(airlineController.sortAirlinersByFlightRange().toString());
+                printResult(airlineController.sortAirlinersByFlightRange().toString());
                 break;
             }
             case 3: {
-                consoleView.printMessage(airlineController.calculateCapacity().toString());
+                printResult(airlineController.calculateCapacity().toString());
                 break;
             }
             case 4: {
-                consoleView.printMessage(airlineController.calculatePassengerCapacity().toString());
+                printResult(airlineController.calculatePassengerCapacity().toString());
                 break;
             }
             default: {
-                consoleView.printGoodbyeMessage();
                 break;
             }
         }
+        endOfProgram();
     }
+
+    private void endOfProgram(){
+        consoleView.printGoodbyeMessage();
+    }
+
+    private void printMessage(String...string){
+        consoleView.printMessage(string);
+    }
+
+    private void printResult(String string){
+        consoleView.printResultMessage();
+        printMessage(string);
+    }
+
 }
 
 
