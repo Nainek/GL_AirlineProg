@@ -7,7 +7,7 @@ import java.util.Scanner;
 /**
  * Utility class that provides methods for validated user's input from console
  *
- * @author Solomka
+ * @author Sikach
  *
  */
 final class UserInputProcessUtility {

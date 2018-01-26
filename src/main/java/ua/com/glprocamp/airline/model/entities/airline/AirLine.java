@@ -10,7 +10,6 @@ public class AirLine {
 
     private List<Airliner> airliners;
 
-
     public static class Builder implements IBuilder<AirLine> {
         AirLine airLine = new AirLine();
 
@@ -19,18 +18,13 @@ public class AirLine {
             return this;
         }
 
-
-
         public AirLine build() {
             return airLine;
         }
     }
 
     private AirLine(){
-
     }
-
-
 
     public List<Airliner> getAirliners() {
         return airliners;
@@ -42,8 +36,6 @@ public class AirLine {
 
     public void addAirliner(Airliner airliner){
         airliners.add(airliner);
-
     }
-
 
 }

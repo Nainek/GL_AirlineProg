@@ -47,16 +47,13 @@ public class CargoAirliner extends Airliner {
             return this;
         }
 
-
         public Airliner build() {
             return airliner;
         }
     }
 
     private CargoAirliner(){
-
     }
-
 
     public int getCargoHoldCapacity() {
         return cargoHoldCapacity;

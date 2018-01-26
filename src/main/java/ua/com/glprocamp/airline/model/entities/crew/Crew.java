@@ -21,13 +21,10 @@ public class Crew {
             crew.pilot = pilot;
             return this;
         }
-
-
         public Crew build() {
             return crew;
         }
     }
-
 
     private Crew() {
     }
@@ -53,4 +50,5 @@ public class Crew {
     public String toString() {
         return "Crew";
     }
+
 }

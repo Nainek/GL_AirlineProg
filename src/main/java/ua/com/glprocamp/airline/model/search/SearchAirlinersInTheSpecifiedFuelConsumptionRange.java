@@ -25,9 +25,8 @@ public class SearchAirlinersInTheSpecifiedFuelConsumptionRange implements Search
                 resultListOfProducts.add(temporaryAirlinerForComparison);
             }
         }
-
         return resultListOfProducts;
-            }
+    }
 
     private void correctRange( int start, int end){
         if(start > end){

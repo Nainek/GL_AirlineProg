@@ -16,19 +16,14 @@ public class AirLineService {
     SearchAircraftsStrategy searchAircraftsStrategy = new SearchAirlinersInTheSpecifiedFuelConsumptionRange();
 
     public AirLine getAirlineCompany(){
-
         return new CreationService().getAirLineCompany();
-
     }
 
     public List<Airliner> sortAirlinersByFlightRange(List<Airliner> aircrafts){
 
         Collections.sort(aircrafts, new ComparatorByFlightRange());
         return aircrafts;
-
-
     }
-
 
     public int calculateCapacity(AirLine airLine) {
         return airLineStatisticsService.calculateCarryingCapacity(airLine);

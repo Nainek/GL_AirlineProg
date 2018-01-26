@@ -15,7 +15,6 @@ public class PassengerAirliner extends Airliner {
         return getQuantityOfSitsForCrew() + getQuantityOfSitsForPassenger();
     }
 
-
     public static class Builder implements IBuilder<Airliner> {
         PassengerAirliner airliner = new PassengerAirliner();
 
@@ -59,7 +58,6 @@ public class PassengerAirliner extends Airliner {
             return this;
         }
 
-
         public Airliner build() {
             return airliner;
         }
@@ -93,4 +91,5 @@ public class PassengerAirliner extends Airliner {
                 ", luggageCompartmentCapacity=" + luggageCompartmentCapacity +
                 "}\n";
     }
+
 }

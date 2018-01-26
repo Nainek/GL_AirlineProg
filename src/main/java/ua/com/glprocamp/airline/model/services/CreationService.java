@@ -32,9 +32,6 @@ public class CreationService {
                 .setPersonal(Arrays.asList("First Stewardess", "Second Stewardess"))
                 .setPilot("Best Pilot").build();
 
-
-
-
         Airliner airliner2 = new PassengerAirliner.Builder()
                 .setFlightRange(120)
                 .setFuelConsumption(502)
@@ -67,14 +64,10 @@ public class CreationService {
                 .setCrew(crew)
                 .build();
 
-
         airlinerList.add(airliner1);
         airlinerList.add(airliner3);
         airlinerList.add(airliner2);
     }
-
-
-
 
     public void setAirLine(AirLine airLine) {
         this.airLine = airLine;

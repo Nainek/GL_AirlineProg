@@ -9,19 +9,11 @@ public class AirLineStatisticsService {
 
 
     public Integer calculateSeatingCapasity(AirLine airLine){
-
         return new PassengerCapasityCalculation().calculate(airLine);
-
     }
 
     public Integer calculateCarryingCapacity(AirLine airLine){
-
         return new CapasityCalculation().calculate(airLine);
-
     }
-
-
-
-
 
 }

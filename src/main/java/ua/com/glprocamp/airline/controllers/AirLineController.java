@@ -25,9 +25,7 @@ public class AirLineController {
     }
 
     public List<Airliner> sortAirlinersByFlightRange(){
-
         return airLineService.sortAirlinersByFlightRange(airLine.getAirliners());
-
     }
 
     public Integer calculateCapacity() {
@@ -54,4 +52,5 @@ public class AirLineController {
     public void setAirLineService(AirLineService airLineService) {
         this.airLineService = airLineService;
     }
+
 }

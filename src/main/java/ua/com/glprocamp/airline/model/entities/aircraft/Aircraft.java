@@ -1,6 +1,6 @@
 package ua.com.glprocamp.airline.model.entities.aircraft;
 
-import ua.com.glprocamp.airline.model.entities.IBuilder;
+
 import ua.com.glprocamp.airline.model.entities.MethodOfLift;
 
 public abstract class Aircraft {
@@ -9,10 +9,7 @@ public abstract class Aircraft {
     private int flightRange;
     private int weightCapacity;
 
-
     public abstract int getCarryingCapacity();
-
-
 
 
     public MethodOfLift getMethodOfLift() {
@@ -39,13 +36,12 @@ public abstract class Aircraft {
         this.weightCapacity = weightCapacity;
     }
 
-
     @Override
     public String toString() {
         return "Aircraft{" +
                 "methodOfLift=" + methodOfLift +
                 ", flightRange=" + flightRange +
                 ", weightCapacity=" + weightCapacity +
-                '}';
+                "}";
     }
 }

@@ -16,7 +16,6 @@ public class PassengerCapasityCalculation implements CalculationStrategy<AirLine
                 result += iterator.next().getQuantityOfSits();
             }
 
-
         return result;
     }
 

@@ -43,6 +43,6 @@ public abstract class Airliner extends Aircraft {
                 "quantityOfSitsForCrew=" + quantityOfSitsForCrew +
                 ", crew=" + crew +
                 ", fuelConsumption=" + fuelConsumption +
-                '}';
+                "}";
     }
 }
