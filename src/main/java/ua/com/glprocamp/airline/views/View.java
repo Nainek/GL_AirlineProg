@@ -23,6 +23,10 @@ public class View {
         printMessage(ViewLocale.BUNDLE.getString(ViewMessage.GOODBYE_MESSAGE), ViewMessageUtils.NEW_LINE);
     }
 
+    public void printResultMessage() {
+        printMessage(ViewLocale.BUNDLE.getString(ViewMessage.RESULT_MESSAGE), ViewMessageUtils.NEW_LINE);
+    }
+
     public void printMessage(String... messages) {
         String resultedMessage = concatenationString(messages);
         System.out.println(resultedMessage);
